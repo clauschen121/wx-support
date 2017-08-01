@@ -1,0 +1,12 @@
+<!--logs.wxml-->
+<view class="container">
+  <view class="describe">{{describe}}</view>
+  <view class="classname" wx:for="{{products}}" wx:key="index">
+    <view class="content-title">{{item.title}}</view>
+    <view class="content-body" bindtap="jumpTo" data-url="{{item.jump}}">
+      <image src="{{item.url}}"></image>
+      <view class="detail">{{item.detail}}</view>
+    </view>
+
+  </view>
+</view>

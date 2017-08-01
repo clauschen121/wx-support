@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="index-wel">
+    <text class="index-wel-text">{{weltext}}</text>
+  </view>
+  <view class="index-content">
+    <text class="index-content-text">{{detext}}</text>
+  </view>
+  <view wx:for="{{indexbt}}" wx:key="index">
+    <view class="btn-wrapper">
+      <button type="default" bindtap="jumpTab" data-url="{{item.url}}"><image style="{{item.imgst}}" src="{{item.imgurl}}"></image>{{item.text}}</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+/* pages/service/service.wxss */
+.picker {
+  background: white;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}

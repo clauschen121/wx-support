@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/search/search",
+    "pages/analyze/analyze",
+    "pages/service/service"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "深圳宏电自助服务系统",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color": "#707070",
+    "selectedColor": "#d81e06",
+    "list":[
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"images/tabbar/index.png",
+        "selectedIconPath":"images/tabbar/index_selected.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "产品选型",
+        "iconPath": "images/tabbar/search.png",
+        "selectedIconPath": "images/tabbar/search_selected.png"
+      },
+      {
+        "pagePath": "pages/analyze/analyze",
+        "text": "故障分析",
+        "iconPath": "images/tabbar/analyze.png",
+        "selectedIconPath": "images/tabbar/analyze_selected.png"
+      },
+      {
+        "pagePath": "pages/service/service",
+        "text": "人工服务",
+        "iconPath": "images/tabbar/service.png",
+        "selectedIconPath": "images/tabbar/service_selected.png"
+      }
+    ]
+  }
+}
