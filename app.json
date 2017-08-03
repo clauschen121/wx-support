@@ -3,7 +3,10 @@
     "pages/index/index",
     "pages/search/search",
     "pages/analyze/analyze",
-    "pages/service/service"
+    "pages/service/service",
+    "pages/search/m2m",
+    "pages/search/dvs",
+    "pages/search/water"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="form-container">
+    <text>请选择您需要的功能</text>
+    <form bindsubmit="formSubmit" wx:for="{{specifications}}" wx:key="index_spec">
+      <view class="section_title">{{item.title}}</view>
+      <<radio-group name="{{item.name}}" class="section_body" wx:for="{{item.specheck}}" wx:for-item="item2" wx:key="index_check">
+        <label><radio value="{{item2.value}}" />{{item2.name}}</label>
+      </radio-group>
+    </form>
+  </view>
+  <view class="{{flag==0?'hide':'show'}}" wx:for="{{products}}" wx:key="index_pro">
+    <view class="product_container"> 
+      <view class="product_title">{{item.name}}</view>
+      <image style="width:40px;height:40px;" src="../../images/search/m2m/{{item.imgurl}}"></image>  
+      <view class="product_body">{{item.detail}}</view>
+      <view class="product_footer"></view>
+    </view>
+  </view>
+</view>
