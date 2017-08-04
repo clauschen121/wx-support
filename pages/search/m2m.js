@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    flag: 0,
     specifications: [
       {
         title: '移动网络的类型',
@@ -71,28 +72,27 @@ Page({
       {
         title: '是否需要wifi，不需要或不清楚则选否',
         name: 'wifi',
-        specheck: [
-          {
-            value: 1,
-            name: '是'
-          },
+        specheck: [          
           {
             value: 0,
             name: '否'
+          }, {
+            value: 1,
+            name: '是'
           }
         ]
       },
       {
         title: '是否需要带视频监控，不需要或不清楚选否',
         name: 'video',
-        specheck: [
-          {
-            value: 1,
-            name: '是'
-          },
+        specheck: [          
           {
             value: 0,
             name: '否'
+          },
+          {
+            value: 1,
+            name: '是'
           }
         ]
       },
@@ -246,7 +246,7 @@ Page({
         app: 0,
         vpn: 0,
         name: 'H7118',
-        imgurl: 'H118.png',
+        imgurl: 'H7118.png',
         detail: '采用高性能工业级设计，军工级模块，温度适应能力超强，特别适用于恶劣的工业环境；体积最小、功耗最低的一款外置式产品，尺寸相当于通用名片的大小，厚度不到2CM。'
       },
       H7710E: {
@@ -314,56 +314,44 @@ Page({
         imgurl: 'H9303.png',
         detail: '丰富的网络接入方案，支持WiFi免费接入；高并发性，可支持同时20-80人上网；多种内容存储和更新方案；支持广告推送吸粉；架构简单，部署方便。'
       },
+    },
+    showList:[]
+  },
+
+  formSubmit: function(e){
+    this.data.showList = [];
+    var newObj = this.defValue(e.detail.value);
+    this.matchProducts(newObj);
+    this.setData({
+      showList: this.data.showList,
+      flag: 1
+    });
+  },
+
+  defValue: function(obj){
+    for(let x in obj){
+      if(obj[x]==''){
+        obj[x]==0;
+      }
     }
+    return obj
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
+  matchProducts(obj){
+    var i;
+    for(let x in this.data.products){
+      i = 0;
+      for(let y in this.data.products[x]){
+        if(obj.hasOwnProperty(y)){
+          if (obj[y] <= this.data.products[x][y]){
+            i++;
+          }
+        }
+      }
+      if(i==8){
+        this.data.showList.push(this.data.products[x]);
+      }
+    }
   },
 
   /**
