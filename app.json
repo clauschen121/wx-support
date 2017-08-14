@@ -6,7 +6,12 @@
     "pages/service/service",
     "pages/search/m2m",
     "pages/search/dvs",
-    "pages/search/water"
+    "pages/search/water",
+    "pages/service/m2m/sales",
+    "pages/service/m2m/support",
+    "pages/analyze/m2m/support",
+    "pages/analyze/dvs/support",
+    "pages/analyze/water/support"
   ],
   "window":{
     "backgroundTextStyle":"light",

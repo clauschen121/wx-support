@@ -6,9 +6,10 @@ Page({
    */
   data: {
     flag: 0,
+    toview:'',
     specifications: [
       {
-        title: '移动网络的类型',
+        title: '1.移动网络的类型',
         name: 'network',
         specheck: [
           {
@@ -26,7 +27,7 @@ Page({
         ]
       },
       {
-        title: '串口的数量，不需要或不清楚选0',
+        title: '2.串口的数量',
         name:'serial',
         specheck: [
           {
@@ -48,7 +49,7 @@ Page({
         ] 
       },
       {
-        title: '网口的数量，不需要或不清楚选0',
+        title: '3.网口的数量',
         name: 'lan',
         specheck: [
           {
@@ -70,7 +71,7 @@ Page({
         ]
       },
       {
-        title: '是否需要wifi，不需要或不清楚则选否',
+        title: '4.是否需要wifi',
         name: 'wifi',
         specheck: [          
           {
@@ -83,7 +84,7 @@ Page({
         ]
       },
       {
-        title: '是否需要带视频监控，不需要或不清楚选否',
+        title: '5.是否需要带视频监控',
         name: 'video',
         specheck: [          
           {
@@ -97,7 +98,7 @@ Page({
         ]
       },
       {
-        title: '是否需要定位功能，如果需要，请选择产品应用场所',
+        title: '6.是否需要定位功能，如果需要，请选择产品应用场所',
         name: 'location',
         specheck: [
           {
@@ -115,7 +116,7 @@ Page({
         ]
       },
       {
-        title: '是否需要在产品内内置app或对产品二次开发',
+        title: '7.是否需要在产品内内置app或对产品二次开发',
         name: 'app',
         specheck: [
           {
@@ -129,7 +130,7 @@ Page({
         ]
       },
       {
-        title: '是否需要产品支持VPN功能',
+        title: '8.是否需要产品支持VPN功能',
         name: 'vpn',
         specheck: [
           {
@@ -323,6 +324,7 @@ Page({
     var newObj = this.defValue(e.detail.value);
     this.matchProducts(newObj);
     this.setData({
+      toview: 'product',
       showList: this.data.showList,
       flag: 1
     });

@@ -1,6 +1,7 @@
-<view class="container">
+<scroll-view class="container" scroll-y="true" scroll-into-view="{{toview}}">
+
   <view class="form-container">
-    <text>请选择您需要的功能</text>
+    <text>请选择您需要的功能（不清楚则不选）</text>
     <form bindsubmit="formSubmit">
       <view class="chkcontent" wx:for="{{specifications}}" wx:key="index_spec">
         <view class="section_title">{{item.title}}</view>
@@ -9,28 +10,31 @@
         </radio-group>
       </view>
       <view class="btncls">
-        <button type="default" form-type="submit">开始选型</button>
-        <button type="default" form-type="reset">重置</button>
+        <button type="default" size="mini" form-type="submit">开始选型</button>
+        <button type="default" size="mini" form-type="reset">重置</button>
       </view>
     </form>
   </view>
   
-  <view class="product_container {{flag==0?'hide':'show'}}">
+  <view id="product" class="product_container {{flag==0?'hide':'show'}}">
     <block wx:if="{{showList.length != 0}}">
       <block wx:for="{{showList}}" wx:key="{{index_product}}">
         <view class="product">
           <view class="product_title">{{item.name}}</view>
-          <image style="width:100px;height:100px;" src="../../images/search/m2m/{{item.imgurl}}"></image>  
+          <image style="width:150px;height:100px;" src="../../images/search/m2m/{{item.imgurl}}"></image>  
           <view class="product_body">{{item.detail}}</view>
-          <view class="product_footer"></view>
+          <view class="product_footer">
+            <navigator url="../service/m2m/sales">咨询价格</navigator>
+            <navigator url="../service/m2m/support">咨询技术</navigator>
+          </view>
         </view>
       </block>
     </block>
     <block wx:else>
-      <view class="error">
+      <view class="error" id="product">
         <text>未查到您需要的产品，请联系我司技术进行详细沟通</text>
       </view>
     </block>
   </view> 
 
-</view>
+</scroll-view>

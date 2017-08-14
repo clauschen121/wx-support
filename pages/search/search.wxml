@@ -7,6 +7,5 @@
       <image src="{{item.url}}"></image>
       <view class="detail">{{item.detail}}</view>
     </view>
-
   </view>
 </view>

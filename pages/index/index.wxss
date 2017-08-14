@@ -1,21 +1,32 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
+.index-wel {
   margin: 20rpx;
-  border-radius: 50%;
+  text-align: center;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.index-wel-text {
+  font-family: '微软雅黑';
+  font-size: 50rpx;
+  color:#d81e06;
+  text-align: center;
+  line-height: 70rpx;
+  letter-spacing: 12rpx;
 }
 
-.usermotto {
-  margin-top: 200px;
+.index-content {
+  margin:40rpx 0;
+  font-family:'微软雅黑';
+  text-indent: 70rpx;
+  letter-spacing: 8rpx;
+}
+
+.btn-wrapper {
+  margin: 20rpx;
+}
+
+.btn-wrapper button {
+  color:#606060;
+  background-color: #eee;
+  font-size: 40rpx;
+  width: 400rpx;
 }

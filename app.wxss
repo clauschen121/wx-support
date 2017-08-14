@@ -5,8 +5,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 200rpx 0;
+  padding: 50rpx 50rpx;
   box-sizing: border-box;
+  font-family: '微软雅黑';
+  color:#606060;
+  font-size:35rpx;
+  line-height: 45rpx;
 } 
 
 .hide {
@@ -16,3 +20,109 @@
 .show {
   display: block;
 }
+
+.describe {
+  font-size: 40rpx;
+  color:#d81e06;
+  line-height: 50rpx;
+  letter-spacing: 6rpx;
+}
+
+.classname {
+  border: 2rpx solid #ccc;
+  padding: 10rpx;
+  margin: 10rpx;
+  border-radius: 15rpx;
+}
+
+.classname .content-title {
+  margin: 15rpx;
+  font-size:35rpx;
+  color: #404040;
+  font-weight: bold;
+}
+
+.content-body image {
+  width:600rpx;
+  height:400rpx;
+  margin: 10rpx;
+}
+
+.form-container text {
+  margin-bottom: 20rpx;
+  font-weight: bold;
+  font-size: 35rpx;
+}
+
+.form-container button {
+  margin: 10rpx;
+  font-family: '微软雅黑';
+  letter-spacing: 5rpx;
+  color:#606060;
+  background-color: #eee;
+  font-size: 35rpx;
+}
+
+form .chkcontent {
+  margin:10rpx;
+}
+
+form .chkcontent label{
+  margin-left: 10rpx;
+}
+
+.product {
+  border: 2rpx solid #ccc;
+  margin: 20rpx;
+  padding: 20rpx;
+}
+
+.product .product_title{
+  font-size: 35rpx;
+  font-weight: bold;
+}
+
+.product .product_footer{
+  margin:10rpx;
+  color: #d81e06;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.pk-view text{
+  color: #d81e06;
+  font-size: 35rpx;
+  margin:10rpx;
+}
+
+.picker{
+  margin:10rpx;
+  border: 2rpx solid #d81e06;
+  padding-left: 20rpx;
+  border-radius: 10rpx;
+  line-height: 60rpx;
+}
+
+.serv-content{
+  margin:20rpx;
+}
+
+.problem .title,.solution .title{
+  font-size: 40rpx;
+  color:#d81e06;
+  font-weight: bold;
+  margin:20rpx;
+}
+
+.problem .option,.solution .detail{
+  margin:30rpx;
+  line-height: 50rpx;
+  letter-spacing: 3rpx;
+}
+
+.contact button {
+  color:#d81e06;
+  margin:20rpx;
+}
+

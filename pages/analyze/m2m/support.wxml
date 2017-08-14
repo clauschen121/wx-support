@@ -1,0 +1,19 @@
+<!--pages/analyze/m2m/support.wxml-->
+<view class="container">
+  <view class="problem" wx:if="{{showinfo.option}}">
+    <view class="title">{{showinfo.title}}</view>
+    <block wx:for="{{showinfo.option}}" wx:key="index">
+      <view class="option" data-value="{{item.value}}" bindtap="toNext">
+        <view class="text">·    {{item.text}}</view>
+      </view>
+    </block>
+  </view>
+  <view class="solution" wx:else>
+    <view class="title">{{showinfo.title}}</view>
+    <text class="detail">{{showinfo.detail}}</text>
+  </view>
+  <view class="contact" wx:if="{{showindex.length>1}}">
+    <button type="default" size="mini" bindtap="toLast">退到上一选项</button>
+    <button type="default" size="mini" bindtap="toService">人工服务</button>
+  </view>
+</view>

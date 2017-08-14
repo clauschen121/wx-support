@@ -1,1 +1,8 @@
 /* pages/search/m2m.wxss */
+.container {
+  height: 2000rpx;
+}
+
+.error text{
+  color: #d81e06;
+}

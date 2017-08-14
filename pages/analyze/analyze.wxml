@@ -1,12 +1,11 @@
 <!--pages/analyze/analyze.wxml-->
 <view class="container">
-  <view class="pk-view">
-    <text>为了给您寻找专属客服，请选择您公司所在地</text>
-    <picker mode="region" bindchange="bindRegionChange"  value="{{region}}">
-      <view class="picker">
-        当前选择：{{region[0]}},{{region[1]}},{{region[2]}}
-      </view>
-    </picker>
+  <view class="describe">{{describe}}</view>
+  <view class="classname" wx:for="{{products}}" wx:key="index">
+    <view class="content-title">{{item.title}}</view>
+    <view class="content-body" bindtap="jumpTo" data-url="{{item.jump}}">
+      <image src="{{item.url}}"></image>
+      <view class="detail">{{item.detail}}</view>
+    </view>
   </view>
-  
 </view>
